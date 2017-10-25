@@ -1,6 +1,7 @@
 import React from "react";
 import { addToCart } from "../../ducks/reducer";
 import { connect } from "react-redux";
+import { Link } from 'react-router-dom';
 
 import './Details.css';
 
@@ -13,7 +14,9 @@ function Details( { swag, history, addToCart } ) {
 
   return (
     <div id="Details__container">
+    <Link id="Details__storeLink" to="/">
       <p> { '<' } Back to store </p>
+    </Link>
       <img id="Details__img" src={ swag.img } alt="Product" width="400px" />
       <p id="Details__title"> { swag.title } </p>
       <p id="Details__price"> ${ swag.price } </p>
